@@ -1,0 +1,5 @@
+- vec3_normalized (non approx) using normal sqrtss
+- look for a better way to sum __m128[0, 1, 2], current shifting method is probably suboptimal
+- see if xxxxSS instructions are faster than xxxxPS. everything would imply no, but I got a speed up from that on vec3_normalized_approx
+- other vec sizes, double precision, avx, avx2. probably would be easier to make this a C++ lib with template params and specialization for asm routines
+- benchmarks
